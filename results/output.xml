@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-20T21:27:36.579643" rpa="false" schemaversion="5">
+<suite id="s1" name="Feladat" source="D:\INFO\projektfeladat\feladat">
+<suite id="s1-s1" name="Test" source="D:\INFO\projektfeladat\feladat\test.robot">
+<test id="s1-s1-t1" name="Searching" line="10">
+<kw name="Test Setup" owner="resources.resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T21:27:36.870765" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T21:27:36.870765" elapsed="3.188059"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-20T21:27:40.058824" elapsed="0.136032"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-20T21:27:40.195857" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
+<arg>https://bwpool.azurewebsites.net/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-20T21:27:40.195857" elapsed="0.335656"/>
+</kw>
+<status status="PASS" start="2024-03-20T21:27:36.868774" elapsed="3.662739"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T21:27:40.533513" level="INFO">Clicking element '//a[contains(.,'Partnerek')]'.</msg>
+<arg>${PARTNEREK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T21:27:40.532513" elapsed="0.348960"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T21:27:40.883473" level="INFO">Clicking element '//span[.='Add']'.</msg>
+<msg time="2024-03-20T21:27:41.023523" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-20T21:27:41.024522" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F12FAD02+56930]
+	(No symbol) [0x00007FF7F126F602]
+	(No symbol) [0x00007FF7F112419D]
+	(No symbol) [0x00007FF7F116ACA2]
+	(No symbol) [0x00007FF7F115F798]
+	(No symbol) [0x00007FF7F118BC9A]
+	(No symbol) [0x00007FF7F115F09A]
+	(No symbol) [0x00007FF7F118BEB0]
+	(No symbol) [0x00007FF7F11A81E2]
+	(No symbol) [0x00007FF7F118BA43]
+	(No symbol) [0x00007FF7F115D438]
+	(No symbol) [0x00007FF7F115E4D1]
+	GetHandleVerifier [0x00007FF7F1676F8D+3711213]
+	GetHandleVerifier [0x00007FF7F16D04CD+4077101]
+	GetHandleVerifier [0x00007FF7F16C865F+4044735]
+	GetHandleVerifier [0x00007FF7F1399736+706710]
+	(No symbol) [0x00007FF7F127B8DF]
+	(No symbol) [0x00007FF7F1276AC4]
+	(No symbol) [0x00007FF7F1276C1C]
+	(No symbol) [0x00007FF7F12668D4]
+	BaseThreadInitThunk [0x00007FFF01177344+20]
+	RtlUserThreadStart [0x00007FFF02E826B1+33]
+</msg>
+<arg>${ADDBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-20T21:27:40.883473" elapsed="0.146050">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F12FAD02+56930]
+	(No symbol) [0x00007FF7F126F602]
+	(No symbol) [0x00007FF7F112419D]
+	(No symbol) [0x00007FF7F116ACA2]
+	(No symbol) [0x00007FF7F115F798]
+	(No symbol) [0x00007FF7F118BC9A]
+	(No symbol) [0x00007FF7F115F09A]
+	(No symbol) [0x00007FF7F118BEB0]
+	(No symbol) [0x00007FF7F11A81E2]
+	(No symbol) [0x00007FF7F118BA43]
+	(No symbol) [0x00007FF7F115D438]
+	(No symbol) [0x00007FF7F115E4D1]
+	GetHandleVerifier [0x00007FF7F1676F8D+3711213]
+	GetHandleVerifier [0x00007FF7F16D04CD+4077101]
+	GetHandleVerifier [0x00007FF7F16C865F+4044735]
+	GetHandleVerifier [0x00007FF7F1399736+706710]
+	(No symbol) [0x00007FF7F127B8DF]
+	(No symbol) [0x00007FF7F1276AC4]
+	(No symbol) [0x00007FF7F1276C1C]
+	(No symbol) [0x00007FF7F12668D4]
+	BaseThreadInitThunk [0x00007FFF01177344+20]
+	RtlUserThreadStart [0x00007FFF02E826B1+33]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-20T21:27:42.029724" level="INFO">Clicking element '//span[.='Add']'.</msg>
+<arg>${ADDBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.029724" elapsed="0.038001"/>
+</kw>
+<arg>5s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${ADDBUTTON}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-20T21:27:40.882474" elapsed="1.186251"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-03-20T21:27:42.937933" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
+ path_url=/api/users/random_user?size=1 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-03-20T21:27:42.937933" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
+ status=200, reason=OK 
+ headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"fee200f753acc41bada7c9a593138467"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '27c5a4b1-b00d-460c-8eda-043e9e05e1c2', 'X-Runtime': '0.013512', 'X-Xss-Protection': '0', 'Date': 'Wed, 20 Mar 2024 20:27:42 GMT', 'Content-Length': '581'} 
+ body=[{"id":5208,"uid":"267ab58c-f815-4738-adfc-8c88e5391fcb","password":"Q8sFw1c6yD","first_name":"Alexandra","last_name":"Runolfsdottir","username":"alexandra.runolfsdottir","email":"alexandra.runolfsdottir@email.com","avatar":"https://robohash.org/quisnatusperferendis.png?size=300x300\u0026set=set1","gender":"Non-binary","phone_number":"+253 662-771-0582 x6287","social_insurance_number":"534560909","date_of_birth":"1996-02-21","employment":{"title":"Global Analyst","key_skill":"Confidence"},"address":{"city":"Bokville","street_name":"Edison Vista","street_address":"439 Reinger Field","zip_code":"54762","state":"Maine","country":"United States","coordinates":{"lat":20.977663178440196,"lng":103.02080667267688}},"credit_card":{"cc_number":"4201-7445-7049-5491"},"subscription":{"plan":"Professional","status":"Pending","payment_method":"Bitcoins","term":"Monthly"}}] 
+ </msg>
+<msg time="2024-03-20T21:27:42.937933" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>https://random-data-api.com/api/users/random_user</arg>
+<arg>params=size=1</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.069725" elapsed="0.868208"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T21:27:42.939934" level="INFO">${body} = [{'id': 5208, 'uid': '267ab58c-f815-4738-adfc-8c88e5391fcb', 'password': 'Q8sFw1c6yD', 'first_name': 'Alexandra', 'last_name': 'Runolfsdottir', 'username': 'alexandra.runolfsdottir', 'email': 'alexand...</msg>
+<var>${body}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.938933" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T21:27:42.940935" level="INFO">${first_name} = Alexandra</msg>
+<var>${first_name}</var>
+<arg>${body}[0][first_name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.940935" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T21:27:42.942936" level="INFO">${last_name} = Runolfsdottir</msg>
+<var>${last_name}</var>
+<arg>${body}[0][last_name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.942936" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T21:27:42.944935" level="INFO">${email} = alexandra.runolfsdottir@email.com</msg>
+<var>${email}</var>
+<arg>${body}[0][email]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.943934" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-20T21:27:42.945935" level="INFO">${id} = 5208</msg>
+<var>${id}</var>
+<arg>${body}[0][id]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-20T21:27:42.944935" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-03-20T21:27:36.867764" elapsed="6.078171"/>
+</test>
+<status status="PASS" start="2024-03-20T21:27:36.613650" elapsed="6.334286"/>
+</suite>
+<status status="PASS" start="2024-03-20T21:27:36.585644" elapsed="6.365293"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Feladat">Feladat</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Feladat.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
