@@ -5,25 +5,11 @@ Resource     resources.resource.robot
 Test Setup    Test Setup
 Test Teardown    Test Teardown
 
-
 *** Test Cases ***
 
 Searching
     Click Element    ${PARTNEREK}
     Wait Until Keyword Succeeds    5s    1s    Click Element    ${ADDBUTTON}
-#Api bekeres 
-    ${response}    GET    https://random-data-api.com/api/users/random_user    params=size=1
-    ${body}    Set Variable    ${response.json()}
-
-#Json random adatok
-    ${first_name}    Set Variable    ${body}[0][first_name]
-    ${last_name}    Set Variable    ${body}[0][last_name]
-    ${email}    Set Variable    ${body}[0][email]
-    ${id}    Set Variable    ${body}[0][id]
-    ${city}    Set Variable    ${body}[0][address][city]
-    ${street_name}    Set Variable    ${body}[0][address][street_name]
-    ${zip_code}    Set Variable    ${body}[0][address][zip_code]
-    ${street_address}    Set Variable    ${body}[0][address][street_address]
 
 # beírás mezőkbe
     Input Text    ${NAME_FIELD}    ${first_name} ${last_name}
@@ -36,18 +22,6 @@ Telephely
     Click Element    ${TELEPHELYEK}
     Wait Until Keyword Succeeds    5s    1s    Click Element    ${ADDBUTTONTWO}
 
-#Api bekeres
-    ${response}    GET    https://random-data-api.com/api/users/random_user    params=size=1
-    ${body}    Set Variable    ${response.json()}
-
-#Json random adatok
-    ${first_name}    Set Variable    ${body}[0][first_name]
-    ${last_name}    Set Variable    ${body}[0][last_name]
-    ${city}    Set Variable    ${body}[0][address][city]
-    ${street_name}    Set Variable    ${body}[0][address][street_name]
-    ${zip_code}    Set Variable    ${body}[0][address][zip_code]
-    ${street_address}    Set Variable    ${body}[0][address][street_address]
-
 #beírás telephely mezőkbe
     Input Text    ${UGYFEL_FIELD}    ${first_name} ${last_name}
     Input Text    ${CITY_FIELD}    ${city}
@@ -57,26 +31,23 @@ Telephely
     Click Button    ${SAVEBUTTON_TELEP}
 
 Eszkozok
-#Api eszkoz bekeres
-    ${response}    GET    https://random-data-api.com/api/device/random_device    params=size=2
-    ${body}    Set Variable    ${response.json()}
-
-#Api bekeres 
-    ${response}    GET    https://random-data-api.com/api/users/random_user    params=size=1
-    ${userdata}    Set Variable    ${response.json()}
-
-#JSoon random
-    ${manufacturer}    Set Variable    ${body}[0][manufacturer]
-    ${model}    Set Variable    ${body}[0][model]
-    ${platform}    Set Variable    ${body}[0][platform]
-    ${serial_number}    Set Variable    ${body}[0][serial_number]
-    ${first_name}    Set Variable    ${userdata}[0][first_name]
-    ${last_name}    Set Variable    ${userdata}[0][last_name]
-
+#Eszkozok navigalas
     Click Element    ${ESZKOZOK}
     Wait Until Keyword Succeeds    5s    1s    Click Element    ${ADDBUTTONTREE}
+
+#beiras
     Input Text    ${MODEL_FIELD}    ${manufacturer} ${model}
     Input Text    ${CUSTOMER_FIELD}    ${first_name} ${last_name}
     Input Text    ${PLATFORM_FIELD}    ${platform}
     Input Text    ${SERIALNUMB_FIELD}    ${serial_number}
     Click Button    ${SAVEBUTTON_ESZKOZ}
+
+#mentés
+    Click Element    ${EXCEL_EXPORT}
+    Press Keys    None    ENTER
+
+#Telephelyekre vissza
+    Click Element    ${TELEPHELYEK}
+    Wait Until Keyword Succeeds    5s    1s    Input Text    ${SEARCH_FIELD}    ${first_name} ${last_name}
+    Click Element    ${SEARCH_ENTER}
+    Click Element    ${STREET_URL}
