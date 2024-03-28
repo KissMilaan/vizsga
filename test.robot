@@ -2,8 +2,8 @@
 Resource     resources.resource.robot
 
 
-Test Setup    Test Setup
-Test Teardown    Test Teardown
+Suite Setup    Suite Setup
+Suite Teardown    Suite Teardown  
 
 *** Test Cases ***
 
@@ -73,6 +73,7 @@ Last Steps
 
 #Telephelyekre vissza
     Click Element    ${TELEPHELYEK}
-    Wait Until Keyword Succeeds    5x    1s    Input Text    ${SEARCH_FIELD}    ${first_name} ${last_name}
+    Wait Until Keyword Succeeds    5x    1s    Input Text    ${SEARCH_FIELD}    ${DROPDOWN_FULLNAME}
     Click Element    ${SEARCH_ENTER}
-    Click Element    ${STREET_URL}
+    Wait Until Keyword Succeeds    5x    1s    Click Element    ${STREET_URL}
+    

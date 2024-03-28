@@ -64,10 +64,10 @@ ${EXCEL_EXPORT}    //span[.='Excel Export']
 #Keresés grid
 ${SEARCH_FIELD}    //input[@id='Grid_ToolbarSearchBox']
 ${SEARCH_ENTER}    //span[@class='e-searchclear e-search-icon e-icons e-input-group-icon']
-${STREET_URL}    xy
+${STREET_URL}    //a[contains(.,'Szervíz')]
 
 *** Keywords ***
-Test Setup
+Suite Setup
     Open Browser    ${HOMEPAGE_URL}    ${BROWSER}
     Maximize Browser Window
     Go To   https://bwpool.azurewebsites.net/
@@ -100,5 +100,5 @@ Test Setup
 
     Sleep    ${DELAY_TIME}s
 
-Test Teardown
+Suite Teardown
     Close Browser

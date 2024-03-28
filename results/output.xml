@@ -1,1148 +1,550 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-28T21:41:17.736896" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-28T21:57:15.361506" rpa="false" schemaversion="5">
 <suite id="s1" name="Feladat" source="D:\INFO\projektfeladat\feladat">
 <suite id="s1-s1" name="Test" source="D:\INFO\projektfeladat\feladat\test.robot">
-<test id="s1-s1-t1" name="Searching" line="10">
-<kw name="Test Setup" owner="resources.resource" type="SETUP">
+<kw name="Suite Setup" owner="resources.resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:18.147313" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
+<msg time="2024-03-28T21:57:15.689530" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
 <arg>${HOMEPAGE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:41:18.146313" elapsed="3.661924"/>
+<status status="PASS" start="2024-03-28T21:57:15.688529" elapsed="3.446337"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-28T21:41:21.808237" elapsed="0.117657"/>
+<status status="PASS" start="2024-03-28T21:57:19.134866" elapsed="0.121185"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:21.926903" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
+<msg time="2024-03-28T21:57:19.257049" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
 <arg>https://bwpool.azurewebsites.net/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:41:21.925894" elapsed="0.351967"/>
+<status status="PASS" start="2024-03-28T21:57:19.257049" elapsed="0.395350"/>
 </kw>
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:41:23.156766" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
+<msg time="2024-03-28T21:57:20.549119" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
  path_url=/api/users/random_user?size=1 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-03-28T21:41:23.157768" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
+<msg time="2024-03-28T21:57:20.549119" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
  status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"97bb68f4017b34233ed1af096dd6082a"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '76d888ed-416e-4e1b-951c-40839c036674', 'X-Runtime': '0.008668', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:41:23 GMT', 'Content-Length': '581'} 
- body=[{"id":4484,"uid":"ee5e812a-ac93-4b81-9cea-1e5487e7e656","password":"Hsh4TZ39bU","first_name":"Gustavo","last_name":"Legros","username":"gustavo.legros","email":"gustavo.legros@email.com","avatar":"https://robohash.org/porroutvitae.png?size=300x300\u0026set=set1","gender":"Bigender","phone_number":"+216 1-444-305-3864","social_insurance_number":"295495766","date_of_birth":"1981-01-02","employment":{"title":"Investor Consulting Strategist","key_skill":"Communication"},"address":{"city":"Lake Paul","street_name":"Brekke Drives","street_address":"42534 Bertram Green","zip_code":"61608-9580","state":"South Carolina","country":"United States","coordinates":{"lat":67.87797244205586,"lng":-8.946227074362014}},"credit_card":{"cc_number":"6771-8960-5651-9080"},"subscription":{"plan":"Gold","status":"Active","payment_method":"Money transfer","term":"Monthly"}}] 
+ headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"b35a01acaa43fe721b77f6863908bb47"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '13c99bc7-5b20-405d-9614-e6ab71c52177', 'X-Runtime': '0.008619', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:57:20 GMT', 'Content-Length': '575'} 
+ body=[{"id":7098,"uid":"e105ca0d-5a03-494e-845e-b661068d3e5e","password":"sY6wlmedh8","first_name":"Beata","last_name":"Howe","username":"beata.howe","email":"beata.howe@email.com","avatar":"https://robohash.org/impeditaperiamvoluptas.png?size=300x300\u0026set=set1","gender":"Male","phone_number":"+20 380-707-0014","social_insurance_number":"685083107","date_of_birth":"1964-05-21","employment":{"title":"Regional Design Strategist","key_skill":"Self-motivated"},"address":{"city":"East Fidela","street_name":"Kraig Rue","street_address":"9565 Mitzie Track","zip_code":"96632-8129","state":"Idaho","country":"United States","coordinates":{"lat":25.139122171924583,"lng":1.6182774000953088}},"credit_card":{"cc_number":"6771-8971-2842-7369"},"subscription":{"plan":"Diamond","status":"Pending","payment_method":"Visa checkout","term":"Full subscription"}}] 
  </msg>
-<msg time="2024-03-28T21:41:23.157768" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-03-28T21:57:20.550121" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>https://random-data-api.com/api/users/random_user</arg>
 <arg>params=size=1</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:41:22.278860" elapsed="0.878908"/>
+<status status="PASS" start="2024-03-28T21:57:19.653400" elapsed="0.896721"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.159769" level="INFO">${body} = [{'id': 4484, 'uid': 'ee5e812a-ac93-4b81-9cea-1e5487e7e656', 'password': 'Hsh4TZ39bU', 'first_name': 'Gustavo', 'last_name': 'Legros', 'username': 'gustavo.legros', 'email': 'gustavo.legros@email.com'...</msg>
+<msg time="2024-03-28T21:57:20.551120" level="INFO">${body} = [{'id': 7098, 'uid': 'e105ca0d-5a03-494e-845e-b661068d3e5e', 'password': 'sY6wlmedh8', 'first_name': 'Beata', 'last_name': 'Howe', 'username': 'beata.howe', 'email': 'beata.howe@email.com', 'avatar': ...</msg>
 <var>${body}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.158769" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:57:20.550121" elapsed="0.001998"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.160770" level="INFO">${first_name} = Gustavo</msg>
+<msg time="2024-03-28T21:57:20.553120" level="INFO">${first_name} = Beata</msg>
 <arg>${first_name}</arg>
 <arg>${body}[0][first_name]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.159769" elapsed="0.001001"/>
+<status status="PASS" start="2024-03-28T21:57:20.552119" elapsed="0.001001"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.161768" level="INFO">${last_name} = Legros</msg>
+<msg time="2024-03-28T21:57:20.554120" level="INFO">${last_name} = Howe</msg>
 <arg>${last_name}</arg>
 <arg>${body}[0][last_name]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.161768" elapsed="0.000917"/>
+<status status="PASS" start="2024-03-28T21:57:20.553120" elapsed="0.001000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.163684" level="INFO">${email} = gustavo.legros@email.com</msg>
+<msg time="2024-03-28T21:57:20.555122" level="INFO">${email} = beata.howe@email.com</msg>
 <arg>${email}</arg>
 <arg>${body}[0][email]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.162685" elapsed="0.000999"/>
+<status status="PASS" start="2024-03-28T21:57:20.554120" elapsed="0.001002"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.164683" level="INFO">${id} = 4484</msg>
+<msg time="2024-03-28T21:57:20.556121" level="INFO">${id} = 7098</msg>
 <arg>${id}</arg>
 <arg>${body}[0][id]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.163684" elapsed="0.000999"/>
+<status status="PASS" start="2024-03-28T21:57:20.556121" elapsed="0.000999"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.165683" level="INFO">${city} = Lake Paul</msg>
+<msg time="2024-03-28T21:57:20.558121" level="INFO">${city} = East Fidela</msg>
 <arg>${city}</arg>
 <arg>${body}[0][address][city]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.164683" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:57:20.557120" elapsed="0.001001"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.166683" level="INFO">${street_name} = Brekke Drives</msg>
+<msg time="2024-03-28T21:57:20.559121" level="INFO">${street_name} = Kraig Rue</msg>
 <arg>${street_name}</arg>
 <arg>${body}[0][address][street_name]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.165683" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:57:20.558121" elapsed="0.001000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.167684" level="INFO">${zip_code} = 61608-9580</msg>
+<msg time="2024-03-28T21:57:20.560122" level="INFO">${zip_code} = 96632-8129</msg>
 <arg>${zip_code}</arg>
 <arg>${body}[0][address][zip_code]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.166683" elapsed="0.001001"/>
+<status status="PASS" start="2024-03-28T21:57:20.560122" elapsed="0.001000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:23.168684" level="INFO">${street_address} = 42534 Bertram Green</msg>
+<msg time="2024-03-28T21:57:20.561122" level="INFO">${street_address} = 9565 Mitzie Track</msg>
 <arg>${street_address}</arg>
 <arg>${body}[0][address][street_address]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.167684" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:57:20.561122" elapsed="0.000999"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:25.170078" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-28T21:57:22.562961" level="INFO">Slept 2 seconds.</msg>
 <arg>${DELAY_TIME}s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:23.168684" elapsed="2.001394"/>
+<status status="PASS" start="2024-03-28T21:57:20.562121" elapsed="2.000840"/>
 </kw>
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:41:26.002296" level="INFO">GET Request : url=https://random-data-api.com/api/device/random_device?size=1 
+<msg time="2024-03-28T21:57:23.428003" level="INFO">GET Request : url=https://random-data-api.com/api/device/random_device?size=1 
  path_url=/api/device/random_device?size=1 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-03-28T21:41:26.002296" level="INFO">GET Response : url=https://random-data-api.com/api/device/random_device?size=1 
+<msg time="2024-03-28T21:57:23.429003" level="INFO">GET Response : url=https://random-data-api.com/api/device/random_device?size=1 
  status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Length': '204', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"509fa4592bea98dc2c51405240706834"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '90f81a05-ee95-402f-9aaf-57ceb6883a31', 'X-Runtime': '0.005994', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:41:26 GMT'} 
- body=[{"id":6929,"uid":"20678071-9d47-4426-88de-976c67eb9e3d","build_number":481,"manufacturer":"HP","model":"Mate 9","platform":"Windows Phone","serial_number":"VMTnd2mMQWvjbtNcZh7UIdULKb1mMo","version":405}] 
+ headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Length': '204', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"7c5f2d849cea82d5c7de71728b7e9d6b"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': 'c49af03e-816a-4a38-8747-68373219d58d', 'X-Runtime': '0.007952', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:57:23 GMT'} 
+ body=[{"id":1573,"uid":"8dd2c7a9-1b85-45bc-addf-b9215d9235dc","build_number":350,"manufacturer":"Huawei","model":"P10 Plus","platform":"Android","serial_number":"UVr864F8zUbyYOAUd4cFOW9hpsZuGn","version":436}] 
  </msg>
-<msg time="2024-03-28T21:41:26.004297" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-03-28T21:57:23.431004" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>https://random-data-api.com/api/device/random_device</arg>
 <arg>params=size=1</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:41:25.170078" elapsed="0.834219"/>
+<status status="PASS" start="2024-03-28T21:57:22.562961" elapsed="0.868043"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.006298" level="INFO">${body_device} = [{'id': 6929, 'uid': '20678071-9d47-4426-88de-976c67eb9e3d', 'build_number': 481, 'manufacturer': 'HP', 'model': 'Mate 9', 'platform': 'Windows Phone', 'serial_number': 'VMTnd2mMQWvjbtNcZh7UIdULKb1mMo...</msg>
+<msg time="2024-03-28T21:57:23.433005" level="INFO">${body_device} = [{'id': 1573, 'uid': '8dd2c7a9-1b85-45bc-addf-b9215d9235dc', 'build_number': 350, 'manufacturer': 'Huawei', 'model': 'P10 Plus', 'platform': 'Android', 'serial_number': 'UVr864F8zUbyYOAUd4cFOW9hpsZuGn...</msg>
 <var>${body_device}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.005296" elapsed="0.001002"/>
+<status status="PASS" start="2024-03-28T21:57:23.432004" elapsed="0.001001"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.007297" level="INFO">${manufacturer} = HP</msg>
+<msg time="2024-03-28T21:57:23.434005" level="INFO">${manufacturer} = Huawei</msg>
 <arg>${manufacturer}</arg>
 <arg>${body_device}[0][manufacturer]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.007297" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:57:23.433005" elapsed="0.001000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.008297" level="INFO">${model} = Mate 9</msg>
+<msg time="2024-03-28T21:57:23.434005" level="INFO">${model} = P10 Plus</msg>
 <arg>${model}</arg>
 <arg>${body_device}[0][model]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.007297" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:57:23.434005" elapsed="0.001001"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.009298" level="INFO">${platform} = Windows Phone</msg>
+<msg time="2024-03-28T21:57:23.435006" level="INFO">${platform} = Android</msg>
 <arg>${platform}</arg>
 <arg>${body_device}[0][platform]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.008297" elapsed="0.001001"/>
+<status status="PASS" start="2024-03-28T21:57:23.435006" elapsed="0.001001"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.010299" level="INFO">${serial_number} = VMTnd2mMQWvjbtNcZh7UIdULKb1mMo</msg>
+<msg time="2024-03-28T21:57:23.437007" level="INFO">${serial_number} = UVr864F8zUbyYOAUd4cFOW9hpsZuGn</msg>
 <arg>${serial_number}</arg>
 <arg>${body_device}[0][serial_number]</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.009298" elapsed="0.001001"/>
+<status status="PASS" start="2024-03-28T21:57:23.436007" elapsed="0.001000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:26.010299" level="INFO">${DROPDOWN_FULLNAME} = Gustavo Legros</msg>
+<msg time="2024-03-28T21:57:23.437007" level="INFO">${DROPDOWN_FULLNAME} = Beata Howe</msg>
 <arg>${DROPDOWN_FULLNAME}</arg>
 <arg>${first_name} ${last_name}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.010299" elapsed="0.000999"/>
+<status status="PASS" start="2024-03-28T21:57:23.437007" elapsed="0.001000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:28.011335" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-28T21:57:25.438992" level="INFO">Slept 2 seconds.</msg>
 <arg>${DELAY_TIME}s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:26.011298" elapsed="2.000037"/>
+<status status="PASS" start="2024-03-28T21:57:23.438007" elapsed="2.000985"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:41:18.145312" elapsed="9.866023"/>
+<status status="PASS" start="2024-03-28T21:57:15.686529" elapsed="9.752463"/>
 </kw>
+<test id="s1-s1-t1" name="Searching" line="10">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:28.013169" level="INFO">Clicking element '//a[contains(.,'Partnerek')]'.</msg>
+<msg time="2024-03-28T21:57:25.440992" level="INFO">Clicking element '//a[contains(.,'Partnerek')]'.</msg>
 <arg>${PARTNEREK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:28.012177" elapsed="0.063011"/>
+<status status="PASS" start="2024-03-28T21:57:25.440002" elapsed="0.055653"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:32.077300" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:57:29.497730" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:28.076189" elapsed="4.001111"/>
+<status status="PASS" start="2024-03-28T21:57:25.496652" elapsed="4.001078"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:32.078300" level="INFO">Simulating Mouse Over on element '//*[@id="Grid_add"]/button'.</msg>
+<msg time="2024-03-28T21:57:29.498727" level="INFO">Simulating Mouse Over on element '//*[@id="Grid_add"]/button'.</msg>
 <arg>${ADDBUTTON}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:32.078300" elapsed="0.285358"/>
+<status status="PASS" start="2024-03-28T21:57:29.498727" elapsed="0.642534"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:34.365032" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-28T21:57:32.142526" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:32.363658" elapsed="2.001374"/>
+<status status="PASS" start="2024-03-28T21:57:30.141261" elapsed="2.001265"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:34.367033" level="INFO">Sending key(s) ('\\',) to //*[@id="Grid_add"]/button element.</msg>
-<msg time="2024-03-28T21:41:34.653200" level="INFO">Sending key \</msg>
+<msg time="2024-03-28T21:57:32.143527" level="INFO">Sending key(s) ('\\',) to //*[@id="Grid_add"]/button element.</msg>
+<msg time="2024-03-28T21:57:32.431413" level="INFO">Sending key \</msg>
 <arg>${ADDBUTTON}</arg>
 <arg>\\</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-28T21:41:34.366033" elapsed="0.295170"/>
+<status status="PASS" start="2024-03-28T21:57:32.143527" elapsed="0.295888"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:35.662294" level="INFO">Slept 1 second.</msg>
+<msg time="2024-03-28T21:57:33.440459" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:34.661203" elapsed="1.001091"/>
+<status status="PASS" start="2024-03-28T21:57:32.439415" elapsed="1.001044"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:35.663283" level="INFO">Typing text 'Gustavo Legros' into text field '//input[@id='name']'.</msg>
+<msg time="2024-03-28T21:57:33.441463" level="INFO">Typing text 'Beata Howe' into text field '//input[@id='name']'.</msg>
 <arg>${NAME_FIELD}</arg>
 <arg>${first_name} ${last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:35.663283" elapsed="0.084600"/>
+<status status="PASS" start="2024-03-28T21:57:33.441463" elapsed="0.078928"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:35.749883" level="INFO">Typing text 'gustavo.legros@email.com' into text field '//input[@id='email']'.</msg>
+<msg time="2024-03-28T21:57:33.521387" level="INFO">Typing text 'beata.howe@email.com' into text field '//input[@id='email']'.</msg>
 <arg>${EMAIL_FIELD}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:35.748884" elapsed="0.112818"/>
+<status status="PASS" start="2024-03-28T21:57:33.520391" elapsed="0.110385"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:35.862702" level="INFO">Typing text '4484' into text field '//input[@id='comment']'.</msg>
+<msg time="2024-03-28T21:57:33.632774" level="INFO">Typing text '7098' into text field '//input[@id='comment']'.</msg>
 <arg>${ID_FIELD}</arg>
 <arg>${id}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:35.862702" elapsed="0.087691"/>
+<status status="PASS" start="2024-03-28T21:57:33.631774" elapsed="0.087486"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:35.952392" level="INFO">Clicking button '//button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']'.</msg>
+<msg time="2024-03-28T21:57:33.720259" level="INFO">Clicking button '//button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']'.</msg>
 <arg>${SAVEBUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:35.951392" elapsed="0.076872"/>
+<status status="PASS" start="2024-03-28T21:57:33.720259" elapsed="0.075561"/>
 </kw>
-<kw name="Test Teardown" owner="resources.resource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-28T21:41:36.030266" elapsed="2.200572"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:36.029265" elapsed="2.201573"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:18.144312" elapsed="20.087526"/>
+<status status="PASS" start="2024-03-28T21:57:25.438992" elapsed="8.357828"/>
 </test>
 <test id="s1-s1-t2" name="Telephelyek" line="25">
-<kw name="Test Setup" owner="resources.resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:38.234839" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
-<arg>${HOMEPAGE_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:41:38.234839" elapsed="2.893447"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-28T21:41:41.129285" elapsed="0.124172"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:41.254457" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
-<arg>https://bwpool.azurewebsites.net/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:41:41.253457" elapsed="0.281531"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:41:42.407456" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
- path_url=/api/users/random_user?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:41:42.407456" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"e4af18621367372e46e964c1d89d382a"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '8ed745a6-80c8-4ada-923d-f2e3ccfdb099', 'X-Runtime': '0.009325', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:41:42 GMT', 'Content-Length': '582'} 
- body=[{"id":4423,"uid":"779a4ecb-46a5-4ff6-954b-777efe5f7003","password":"yFzvEPUeAq","first_name":"Hugh","last_name":"Okuneva","username":"hugh.okuneva","email":"hugh.okuneva@email.com","avatar":"https://robohash.org/optioeiusaspernatur.png?size=300x300\u0026set=set1","gender":"Male","phone_number":"+256 (558) 213-7711 x6152","social_insurance_number":"346759111","date_of_birth":"1987-01-30","employment":{"title":"Principal Facilitator","key_skill":"Confidence"},"address":{"city":"Louannborough","street_name":"Mozella Corner","street_address":"261 Muller Valley","zip_code":"50695","state":"Delaware","country":"United States","coordinates":{"lat":-2.3752107959570594,"lng":-57.38713338997732}},"credit_card":{"cc_number":"4657-8705-2051-1613"},"subscription":{"plan":"Bronze","status":"Pending","payment_method":"Credit card","term":"Payment in advance"}}] 
- </msg>
-<msg time="2024-03-28T21:41:42.410780" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/users/random_user</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:41:41.534988" elapsed="0.875792"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.412781" level="INFO">${body} = [{'id': 4423, 'uid': '779a4ecb-46a5-4ff6-954b-777efe5f7003', 'password': 'yFzvEPUeAq', 'first_name': 'Hugh', 'last_name': 'Okuneva', 'username': 'hugh.okuneva', 'email': 'hugh.okuneva@email.com', 'ava...</msg>
-<var>${body}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.411781" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.413782" level="INFO">${first_name} = Hugh</msg>
-<arg>${first_name}</arg>
-<arg>${body}[0][first_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.412781" elapsed="0.001001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.414783" level="INFO">${last_name} = Okuneva</msg>
-<arg>${last_name}</arg>
-<arg>${body}[0][last_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.414783" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.415782" level="INFO">${email} = hugh.okuneva@email.com</msg>
-<arg>${email}</arg>
-<arg>${body}[0][email]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.415782" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.416782" level="INFO">${id} = 4423</msg>
-<arg>${id}</arg>
-<arg>${body}[0][id]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.416782" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.417783" level="INFO">${city} = Louannborough</msg>
-<arg>${city}</arg>
-<arg>${body}[0][address][city]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.417783" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.418783" level="INFO">${street_name} = Mozella Corner</msg>
-<arg>${street_name}</arg>
-<arg>${body}[0][address][street_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.417783" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.419784" level="INFO">${zip_code} = 50695</msg>
-<arg>${zip_code}</arg>
-<arg>${body}[0][address][zip_code]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.419784" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:42.421784" level="INFO">${street_address} = 261 Muller Valley</msg>
-<arg>${street_address}</arg>
-<arg>${body}[0][address][street_address]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.420784" elapsed="0.001000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:44.423291" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:42.421784" elapsed="2.001507"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:41:45.232958" level="INFO">GET Request : url=https://random-data-api.com/api/device/random_device?size=1 
- path_url=/api/device/random_device?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:41:45.232958" level="INFO">GET Response : url=https://random-data-api.com/api/device/random_device?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Length': '201', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"5ce4f01f35d95f7c9b2886f46898439f"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '4fb55e26-b0a3-47b9-94b8-1d57fca937ed', 'X-Runtime': '0.006888', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:41:45 GMT'} 
- body=[{"id":9566,"uid":"15d1eb75-7888-435b-a877-a9f1318c7a08","build_number":168,"manufacturer":"Samsung","model":"OnePlus One","platform":"Windows 10","serial_number":"T6UuMUTani3VGY4vXGia","version":843}] 
- </msg>
-<msg time="2024-03-28T21:41:45.235456" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/device/random_device</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:41:44.423291" elapsed="0.812165"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.237457" level="INFO">${body_device} = [{'id': 9566, 'uid': '15d1eb75-7888-435b-a877-a9f1318c7a08', 'build_number': 168, 'manufacturer': 'Samsung', 'model': 'OnePlus One', 'platform': 'Windows 10', 'serial_number': 'T6UuMUTani3VGY4vXGia', ...</msg>
-<var>${body_device}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.236457" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.238467" level="INFO">${manufacturer} = Samsung</msg>
-<arg>${manufacturer}</arg>
-<arg>${body_device}[0][manufacturer]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.237457" elapsed="0.001010"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.239458" level="INFO">${model} = OnePlus One</msg>
-<arg>${model}</arg>
-<arg>${body_device}[0][model]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.238467" elapsed="0.000991"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.240458" level="INFO">${platform} = Windows 10</msg>
-<arg>${platform}</arg>
-<arg>${body_device}[0][platform]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.239458" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.240458" level="INFO">${serial_number} = T6UuMUTani3VGY4vXGia</msg>
-<arg>${serial_number}</arg>
-<arg>${body_device}[0][serial_number]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.240458" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:41:45.241458" level="INFO">${DROPDOWN_FULLNAME} = Hugh Okuneva</msg>
-<arg>${DROPDOWN_FULLNAME}</arg>
-<arg>${first_name} ${last_name}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.241458" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:47.242498" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:45.242458" elapsed="2.000040"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:38.233839" elapsed="9.009181"/>
-</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:47.244017" level="INFO">Clicking element '//a[contains(.,'Telephelyek')]'.</msg>
+<msg time="2024-03-28T21:57:33.798820" level="INFO">Clicking element '//a[contains(.,'Telephelyek')]'.</msg>
 <arg>${TELEPHELYEK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:47.243020" elapsed="0.056059"/>
+<status status="PASS" start="2024-03-28T21:57:33.797821" elapsed="0.337446"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:51.300465" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:57:38.136953" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:47.300079" elapsed="4.000386"/>
+<status status="PASS" start="2024-03-28T21:57:34.135267" elapsed="4.001686"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:51.301467" level="INFO">Simulating Mouse Over on element '//span[.='Add']'.</msg>
+<msg time="2024-03-28T21:57:38.138954" level="INFO">Simulating Mouse Over on element '//span[.='Add']'.</msg>
 <arg>${ADDBUTTONTWO}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:51.301467" elapsed="0.296103"/>
+<status status="PASS" start="2024-03-28T21:57:38.138954" elapsed="0.285241"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:53.599458" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-28T21:57:40.425447" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:51.598566" elapsed="2.000892"/>
+<status status="PASS" start="2024-03-28T21:57:38.424195" elapsed="2.001252"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:53.600459" level="INFO">Sending key(s) ('\\',) to //span[.='Add'] element.</msg>
-<msg time="2024-03-28T21:41:53.889936" level="INFO">Sending key \</msg>
+<msg time="2024-03-28T21:57:40.426443" level="INFO">Sending key(s) ('\\',) to //span[.='Add'] element.</msg>
+<msg time="2024-03-28T21:57:40.711903" level="INFO">Sending key \</msg>
 <arg>${ADDBUTTONTWO}</arg>
 <arg>\\</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-28T21:41:53.600459" elapsed="0.296479"/>
+<status status="PASS" start="2024-03-28T21:57:40.426443" elapsed="0.290467"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:41:54.897179" level="INFO">Slept 1 second.</msg>
+<msg time="2024-03-28T21:57:41.718847" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:41:53.896938" elapsed="1.000241"/>
+<status status="PASS" start="2024-03-28T21:57:40.717912" elapsed="1.000935"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:54.898180" level="INFO">Typing text 'Hugh Okuneva' into text field '//input[@class='e-control e-combobox e-lib e-input']'.</msg>
+<msg time="2024-03-28T21:57:41.719847" level="INFO">Typing text 'Beata Howe' into text field '//input[@class='e-control e-combobox e-lib e-input']'.</msg>
 <arg>${UGYFEL_FIELD}</arg>
 <arg>${first_name} ${last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:54.898180" elapsed="0.081573"/>
+<status status="PASS" start="2024-03-28T21:57:41.719847" elapsed="0.071059"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:54.980764" level="INFO">Typing text 'Louannborough' into text field '//input[@id='varos']'.</msg>
+<msg time="2024-03-28T21:57:41.791905" level="INFO">Typing text 'East Fidela' into text field '//input[@id='varos']'.</msg>
 <arg>${CITY_FIELD}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:54.980764" elapsed="0.102241"/>
+<status status="PASS" start="2024-03-28T21:57:41.790906" elapsed="0.093280"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:55.085006" level="INFO">Typing text '50695' into text field '//input[@id='zip']'.</msg>
+<msg time="2024-03-28T21:57:41.886182" level="INFO">Typing text '96632-8129' into text field '//input[@id='zip']'.</msg>
 <arg>${ZIP_FIELD}</arg>
 <arg>${zip_code}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:55.085006" elapsed="0.084082"/>
+<status status="PASS" start="2024-03-28T21:57:41.885197" elapsed="0.087239"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:55.170086" level="INFO">Typing text 'Mozella Corner' into text field '//input[@id='utca']'.</msg>
+<msg time="2024-03-28T21:57:41.974438" level="INFO">Typing text 'Kraig Rue' into text field '//input[@id='utca']'.</msg>
 <arg>${STREET_FIELD}</arg>
 <arg>${street_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:55.170086" elapsed="0.098072"/>
+<status status="PASS" start="2024-03-28T21:57:41.973436" elapsed="0.101050"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:55.269158" level="INFO">Typing text '261 Muller Valley' into text field '//input[@id='szam']'.</msg>
+<msg time="2024-03-28T21:57:42.075486" level="INFO">Typing text '9565 Mitzie Track' into text field '//input[@id='szam']'.</msg>
 <arg>${ADRESS_FIELD}</arg>
 <arg>${street_address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:55.269158" elapsed="0.086611"/>
+<status status="PASS" start="2024-03-28T21:57:42.074486" elapsed="0.090013"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:55.356770" level="INFO">Clicking button '//button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']'.</msg>
+<msg time="2024-03-28T21:57:42.166500" level="INFO">Clicking button '//button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']'.</msg>
 <arg>${SAVEBUTTON_TELEP}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:41:55.355769" elapsed="0.067246"/>
+<status status="PASS" start="2024-03-28T21:57:42.165499" elapsed="0.063192"/>
 </kw>
-<kw name="Test Teardown" owner="resources.resource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-28T21:41:55.424016" elapsed="2.172987"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:55.424016" elapsed="2.172987"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:38.232838" elapsed="19.365165"/>
+<status status="PASS" start="2024-03-28T21:57:33.797821" elapsed="8.431869"/>
 </test>
 <test id="s1-s1-t3" name="Eszkozok" line="43">
-<kw name="Test Setup" owner="resources.resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:41:57.602006" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
-<arg>${HOMEPAGE_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:41:57.602006" elapsed="2.940922"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-28T21:42:00.543929" elapsed="0.127272"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:00.671201" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
-<arg>https://bwpool.azurewebsites.net/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:42:00.671201" elapsed="0.400278"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:42:01.878048" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
- path_url=/api/users/random_user?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:42:01.879056" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"17a008d9beecbca3f0e74a5ca5ed3e96"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '3f9ee77c-48f5-4465-9ac7-078500592443', 'X-Runtime': '0.009782', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:42:02 GMT', 'Content-Length': '586'} 
- body=[{"id":6807,"uid":"b5254e22-b12e-44fd-87cf-c10f1368f7f6","password":"ptyQx5SozA","first_name":"Kirk","last_name":"Buckridge","username":"kirk.buckridge","email":"kirk.buckridge@email.com","avatar":"https://robohash.org/sitmagniillum.png?size=300x300\u0026set=set1","gender":"Genderfluid","phone_number":"+385 682-809-4796 x30533","social_insurance_number":"640408910","date_of_birth":"1966-03-31","employment":{"title":"Central Administration Planner","key_skill":"Confidence"},"address":{"city":"New Ed","street_name":"Rosario Village","street_address":"4278 Stacie Street","zip_code":"34043","state":"Arkansas","country":"United States","coordinates":{"lat":4.4865837479106006,"lng":-32.65547380500581}},"credit_card":{"cc_number":"4366-0794-0439-4805"},"subscription":{"plan":"Starter","status":"Pending","payment_method":"Visa checkout","term":"Monthly"}}] 
- </msg>
-<msg time="2024-03-28T21:42:01.879056" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/users/random_user</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.071479" elapsed="0.807577"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.881046" level="INFO">${body} = [{'id': 6807, 'uid': 'b5254e22-b12e-44fd-87cf-c10f1368f7f6', 'password': 'ptyQx5SozA', 'first_name': 'Kirk', 'last_name': 'Buckridge', 'username': 'kirk.buckridge', 'email': 'kirk.buckridge@email.com'...</msg>
-<var>${body}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.880047" elapsed="0.000999"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.882057" level="INFO">${first_name} = Kirk</msg>
-<arg>${first_name}</arg>
-<arg>${body}[0][first_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.881046" elapsed="0.001011"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.883047" level="INFO">${last_name} = Buckridge</msg>
-<arg>${last_name}</arg>
-<arg>${body}[0][last_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.882057" elapsed="0.000990"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.884057" level="INFO">${email} = kirk.buckridge@email.com</msg>
-<arg>${email}</arg>
-<arg>${body}[0][email]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.883047" elapsed="0.001695"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.885726" level="INFO">${id} = 6807</msg>
-<arg>${id}</arg>
-<arg>${body}[0][id]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.884742" elapsed="0.000984"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.886726" level="INFO">${city} = New Ed</msg>
-<arg>${city}</arg>
-<arg>${body}[0][address][city]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.886726" elapsed="0.001001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.888729" level="INFO">${street_name} = Rosario Village</msg>
-<arg>${street_name}</arg>
-<arg>${body}[0][address][street_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.887727" elapsed="0.001002"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.889727" level="INFO">${zip_code} = 34043</msg>
-<arg>${zip_code}</arg>
-<arg>${body}[0][address][zip_code]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.889727" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:01.890727" level="INFO">${street_address} = 4278 Stacie Street</msg>
-<arg>${street_address}</arg>
-<arg>${body}[0][address][street_address]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.889727" elapsed="0.001000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:03.891842" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:01.891729" elapsed="2.000113"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:42:04.713259" level="INFO">GET Request : url=https://random-data-api.com/api/device/random_device?size=1 
- path_url=/api/device/random_device?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:42:04.713259" level="INFO">GET Response : url=https://random-data-api.com/api/device/random_device?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Length': '213', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"d58bc821e886cd542b5f2c67cb0ea759"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '9e1be6c3-da73-4324-ad31-3b7e7f21acb1', 'X-Runtime': '0.006668', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:42:04 GMT'} 
- body=[{"id":3153,"uid":"39552576-a38d-4d18-a45f-39d3246de296","build_number":254,"manufacturer":"Lenovo","model":"Galaxy S6 Edge","platform":"webOS","serial_number":"tL\u0026^J@24CVF=zP46Lxixk`_a#=o6c5","version":807}] 
- </msg>
-<msg time="2024-03-28T21:42:04.716260" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/device/random_device</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:42:03.891842" elapsed="0.824418"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.717260" level="INFO">${body_device} = [{'id': 3153, 'uid': '39552576-a38d-4d18-a45f-39d3246de296', 'build_number': 254, 'manufacturer': 'Lenovo', 'model': 'Galaxy S6 Edge', 'platform': 'webOS', 'serial_number': 'tL&amp;^J@24CVF=zP46Lxixk`_a#=...</msg>
-<var>${body_device}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.716260" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.718261" level="INFO">${manufacturer} = Lenovo</msg>
-<arg>${manufacturer}</arg>
-<arg>${body_device}[0][manufacturer]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.718261" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.719261" level="INFO">${model} = Galaxy S6 Edge</msg>
-<arg>${model}</arg>
-<arg>${body_device}[0][model]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.719261" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.720261" level="INFO">${platform} = webOS</msg>
-<arg>${platform}</arg>
-<arg>${body_device}[0][platform]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.719261" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.720261" level="INFO">${serial_number} = tL&amp;^J@24CVF=zP46Lxixk`_a#=o6c5</msg>
-<arg>${serial_number}</arg>
-<arg>${body_device}[0][serial_number]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.720261" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:04.721261" level="INFO">${DROPDOWN_FULLNAME} = Kirk Buckridge</msg>
-<arg>${DROPDOWN_FULLNAME}</arg>
-<arg>${first_name} ${last_name}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.721261" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:06.722388" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:04.722261" elapsed="2.000127"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:41:57.601005" elapsed="9.122385"/>
-</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:06.724389" level="INFO">Clicking element '//a[contains(.,'Eszközök')]'.</msg>
+<msg time="2024-03-28T21:57:42.232692" level="INFO">Clicking element '//a[contains(.,'Eszközök')]'.</msg>
 <arg>${ESZKOZOK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:42:06.723390" elapsed="0.063018"/>
+<status status="PASS" start="2024-03-28T21:57:42.232692" elapsed="0.780273"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:10.788689" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:57:47.015025" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:06.787408" elapsed="4.001281"/>
+<status status="PASS" start="2024-03-28T21:57:43.013968" elapsed="4.001057"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:10.790690" level="INFO">Simulating Mouse Over on element '//span[.='Add']'.</msg>
+<msg time="2024-03-28T21:57:47.015813" level="INFO">Simulating Mouse Over on element '//span[.='Add']'.</msg>
 <arg>${ADDBUTTONTREE}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:42:10.789690" elapsed="0.285042"/>
+<status status="PASS" start="2024-03-28T21:57:47.015813" elapsed="0.284203"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:15.075985" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:57:51.301395" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:11.074732" elapsed="4.001762"/>
+<status status="PASS" start="2024-03-28T21:57:47.300016" elapsed="4.001379"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:15.077490" level="INFO">Sending key(s) ('\\',) to //span[.='Add'] element.</msg>
-<msg time="2024-03-28T21:42:15.359648" level="INFO">Sending key \</msg>
+<msg time="2024-03-28T21:57:51.302385" level="INFO">Sending key(s) ('\\',) to //span[.='Add'] element.</msg>
+<msg time="2024-03-28T21:57:51.585393" level="INFO">Sending key \</msg>
 <arg>${ADDBUTTONTREE}</arg>
 <arg>\\</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-03-28T21:42:15.076494" elapsed="0.291041"/>
+<status status="PASS" start="2024-03-28T21:57:51.302385" elapsed="0.291010"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:19.369818" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:57:55.595283" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:15.368535" elapsed="4.001283"/>
+<status status="PASS" start="2024-03-28T21:57:51.594395" elapsed="4.000888"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:19.370815" level="INFO">Clicking element '//*[@id="Grid_dialogEdit_wrapper_dialog-content"]/div/form/table/tbody/tr[3]/td/span/span[2]'.</msg>
-<arg>${CUSTOMER_ARROW}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:42:19.370815" elapsed="0.043521"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:55.596115" level="INFO">Typing text 'Huawei P10 Plus' into text field '//input[@id='name']'.</msg>
+<arg>${MODEL_FIELD}</arg>
+<arg>${manufacturer} ${model}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:57:55.596115" elapsed="0.097959"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:21.415610" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-28T21:57:56.695379" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-28T21:57:55.695074" elapsed="1.000305"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:56.696885" level="INFO">Clicking element '//*[@id="Grid_dialogEdit_wrapper_dialog-content"]/div/form/table/tbody/tr[3]/td/span/span[2]'.</msg>
+<arg>${CUSTOMER_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:57:56.695890" elapsed="0.049224"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-28T21:57:58.746446" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:19.415338" elapsed="2.000272"/>
+<status status="PASS" start="2024-03-28T21:57:56.746113" elapsed="2.000333"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:31.606728" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-259.png"&gt;&lt;img src="selenium-screenshot-259.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-03-28T21:42:31.607729" level="FAIL">Element '//li[.='Kirk Buckridge']' not visible after 10 seconds.</msg>
 <arg>//li[.='${DROPDOWN_FULLNAME}']</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-03-28T21:42:21.416590" elapsed="10.204142">Element '//li[.='Kirk Buckridge']' not visible after 10 seconds.</status>
+<status status="PASS" start="2024-03-28T21:57:58.747443" elapsed="0.025006"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:58.773449" level="INFO">Clicking element '//li[.='Beata Howe']'.</msg>
 <arg>//li[.='${DROPDOWN_FULLNAME}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:31.621732" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:57:58.772449" elapsed="0.045237"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:58.818678" level="INFO">Typing text 'Android' into text field '//textarea[@id='Desc']'.</msg>
+<arg>${PLATFORM_FIELD}</arg>
+<arg>${platform}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:57:58.818678" elapsed="0.109000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:58.928676" level="INFO">Typing text 'UVr864F8zUbyYOAUd4cFOW9hpsZuGn' into text field '//textarea[@id='Comm']'.</msg>
+<arg>${SERIALNUMB_FIELD}</arg>
+<arg>${serial_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:57:58.928676" elapsed="0.124257"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:57:59.054934" level="INFO">Clicking button '//button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']'.</msg>
 <arg>${SAVEBUTTON_ESZKOZ}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:31.621732" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:57:59.053933" elapsed="0.091363"/>
 </kw>
-<kw name="Test Teardown" owner="resources.resource" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-28T21:42:31.623734" elapsed="2.255856"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:42:31.622733" elapsed="2.256857"/>
-</kw>
-<status status="FAIL" start="2024-03-28T21:41:57.599006" elapsed="36.281575">Element '//li[.='Kirk Buckridge']' not visible after 10 seconds.</status>
+<status status="PASS" start="2024-03-28T21:57:42.231691" elapsed="16.914605"/>
 </test>
-<test id="s1-s1-t4" name="Last Steps" line="61">
-<kw name="Test Setup" owner="resources.resource" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:33.883583" level="INFO">Opening browser 'Chrome' to base url 'https://bwpool.azurewebsites.net/'.</msg>
-<arg>${HOMEPAGE_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:42:33.883583" elapsed="3.404744"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-28T21:42:37.288327" elapsed="0.126578"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:37.415907" level="INFO">Opening url 'https://bwpool.azurewebsites.net/'</msg>
-<arg>https://bwpool.azurewebsites.net/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:42:37.415907" elapsed="0.321847"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:42:38.613641" level="INFO">GET Request : url=https://random-data-api.com/api/users/random_user?size=1 
- path_url=/api/users/random_user?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:42:38.613641" level="INFO">GET Response : url=https://random-data-api.com/api/users/random_user?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"99970f983a74a64bbe4a2a31c4726f65"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin, Accept-Encoding', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '8cb5cc39-8e8f-47f2-8530-999727a461ab', 'X-Runtime': '0.008087', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:42:38 GMT', 'Content-Length': '580'} 
- body=[{"id":339,"uid":"a66561ff-b5de-4c35-a050-f96500e9ed3f","password":"lYWBHQDxn7","first_name":"Buck","last_name":"Lueilwitz","username":"buck.lueilwitz","email":"buck.lueilwitz@email.com","avatar":"https://robohash.org/officiailloreiciendis.png?size=300x300\u0026set=set1","gender":"Polygender","phone_number":"+357 871-507-6870 x678","social_insurance_number":"902926666","date_of_birth":"1969-01-06","employment":{"title":"Senior Developer","key_skill":"Work under pressure"},"address":{"city":"East Antoniofort","street_name":"Winston Wall","street_address":"94062 Murphy Well","zip_code":"74770","state":"Wyoming","country":"United States","coordinates":{"lat":-54.91344334242027,"lng":63.472704066999285}},"credit_card":{"cc_number":"4808649884618"},"subscription":{"plan":"Essential","status":"Pending","payment_method":"WeChat Pay","term":"Annual"}}] 
- </msg>
-<msg time="2024-03-28T21:42:38.613641" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/users/random_user</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:42:37.737754" elapsed="0.876887"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.616642" level="INFO">${body} = [{'id': 339, 'uid': 'a66561ff-b5de-4c35-a050-f96500e9ed3f', 'password': 'lYWBHQDxn7', 'first_name': 'Buck', 'last_name': 'Lueilwitz', 'username': 'buck.lueilwitz', 'email': 'buck.lueilwitz@email.com',...</msg>
-<var>${body}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.614641" elapsed="0.002001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.617208" level="INFO">${first_name} = Buck</msg>
-<arg>${first_name}</arg>
-<arg>${body}[0][first_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.617208" elapsed="0.000988"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.619196" level="INFO">${last_name} = Lueilwitz</msg>
-<arg>${last_name}</arg>
-<arg>${body}[0][last_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.618196" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.620195" level="INFO">${email} = buck.lueilwitz@email.com</msg>
-<arg>${email}</arg>
-<arg>${body}[0][email]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.619196" elapsed="0.000999"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.621195" level="INFO">${id} = 339</msg>
-<arg>${id}</arg>
-<arg>${body}[0][id]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.620195" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.622197" level="INFO">${city} = East Antoniofort</msg>
-<arg>${city}</arg>
-<arg>${body}[0][address][city]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.621195" elapsed="0.002002"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.624198" level="INFO">${street_name} = Winston Wall</msg>
-<arg>${street_name}</arg>
-<arg>${body}[0][address][street_name]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.623197" elapsed="0.001001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.625197" level="INFO">${zip_code} = 74770</msg>
-<arg>${zip_code}</arg>
-<arg>${body}[0][address][zip_code]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.624198" elapsed="0.000999"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:38.626197" level="INFO">${street_address} = 94062 Murphy Well</msg>
-<arg>${street_address}</arg>
-<arg>${body}[0][address][street_address]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.625197" elapsed="0.001000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:40.627595" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:38.626197" elapsed="2.001398"/>
-</kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-03-28T21:42:41.481710" level="INFO">GET Request : url=https://random-data-api.com/api/device/random_device?size=1 
- path_url=/api/device/random_device?size=1 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-03-28T21:42:41.481710" level="INFO">GET Response : url=https://random-data-api.com/api/device/random_device?size=1 
- status=200, reason=OK 
- headers={'Alt-Svc': 'h3=":443"; ma=2592000', 'Cache-Control': 'max-age=0, private, must-revalidate', 'Content-Length': '196', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"8415c43b1a1436e46b0cae2d017eaaeb"', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Server': 'Caddy', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Request-Id': '60ba83e7-f46d-4d53-a782-1b6f4138863c', 'X-Runtime': '0.006065', 'X-Xss-Protection': '0', 'Date': 'Thu, 28 Mar 2024 20:42:41 GMT'} 
- body=[{"id":2429,"uid":"20ffb624-1341-454a-9822-cf6452fe15c3","build_number":251,"manufacturer":"Apple","model":"iPhone 5S","platform":"Android OS","serial_number":"T6UuMUTani3VGY4vXGia","version":77}] 
- </msg>
-<msg time="2024-03-28T21:42:41.483710" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>https://random-data-api.com/api/device/random_device</arg>
-<arg>params=size=1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-03-28T21:42:40.627595" elapsed="0.856115"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.485710" level="INFO">${body_device} = [{'id': 2429, 'uid': '20ffb624-1341-454a-9822-cf6452fe15c3', 'build_number': 251, 'manufacturer': 'Apple', 'model': 'iPhone 5S', 'platform': 'Android OS', 'serial_number': 'T6UuMUTani3VGY4vXGia', 'ver...</msg>
-<var>${body_device}</var>
-<arg>${response.json()}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.483710" elapsed="0.002000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.485710" level="INFO">${manufacturer} = Apple</msg>
-<arg>${manufacturer}</arg>
-<arg>${body_device}[0][manufacturer]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.485710" elapsed="0.001001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.486711" level="INFO">${model} = iPhone 5S</msg>
-<arg>${model}</arg>
-<arg>${body_device}[0][model]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.486711" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.487711" level="INFO">${platform} = Android OS</msg>
-<arg>${platform}</arg>
-<arg>${body_device}[0][platform]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.487711" elapsed="0.001000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.489712" level="INFO">${serial_number} = T6UuMUTani3VGY4vXGia</msg>
-<arg>${serial_number}</arg>
-<arg>${body_device}[0][serial_number]</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.488711" elapsed="0.001001"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-03-28T21:42:41.490711" level="INFO">${DROPDOWN_FULLNAME} = Buck Lueilwitz</msg>
-<arg>${DROPDOWN_FULLNAME}</arg>
-<arg>${first_name} ${last_name}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.489712" elapsed="0.000999"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:43.491214" level="INFO">Slept 2 seconds.</msg>
-<arg>${DELAY_TIME}s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:41.490711" elapsed="2.000503"/>
-</kw>
-<status status="PASS" start="2024-03-28T21:42:33.882581" elapsed="9.609634"/>
-</kw>
+<test id="s1-s1-t4" name="Last Steps" line="64">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:43.493217" level="INFO">Clicking element '//a[contains(.,'Partnerek')]'.</msg>
+<msg time="2024-03-28T21:57:59.149298" level="INFO">Clicking element '//a[contains(.,'Partnerek')]'.</msg>
 <arg>${PARTNEREK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:42:43.493217" elapsed="0.061017"/>
+<status status="PASS" start="2024-03-28T21:57:59.148295" elapsed="0.248893"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:42:47.555994" level="INFO">Slept 4 seconds.</msg>
+<msg time="2024-03-28T21:58:03.399568" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:42:43.555236" elapsed="4.000758"/>
+<status status="PASS" start="2024-03-28T21:57:59.398190" elapsed="4.001378"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:42:47.557995" level="INFO">Simulating Mouse Over on element '//span[.='Excel Export']'.</msg>
-<msg time="2024-03-28T21:42:47.573047" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7CEAE70C2+63090]
-	(No symbol) [0x00007FF7CEA52D12]
-	(No symbol) [0x00007FF7CE8EEC65]
-	(No symbol) [0x00007FF7CE8CCA7C]
-	(No symbol) [0x00007FF7CE95D687]
-	(No symbol) [0x00007FF7CE972AC1]
-	(No symbol) [0x00007FF7CE956D83]
-	(No symbol) [0x00007FF7CE9283A8]
-	(No symbol) [0x00007FF7CE929441]
-	GetHandleVerifier [0x00007FF7CEEE262D+4238301]
-	GetHandleVerifier [0x00007FF7CEF1F78D+4488509]
-	GetHandleVerifier [0x00007FF7CEF17A6F+4456479]
-	GetHandleVerifier [0x00007FF7CEBC0606+953270]
-	(No symbol) [0x00007FF7CEA5E5DF]
-	(No symbol) [0x00007FF7CEA592B4]
-	(No symbol) [0x00007FF7CEA593EB]
-	(No symbol) [0x00007FF7CEA49C24]
-	BaseThreadInitThunk [0x00007FF86D3E7344+20]
-	RtlUserThreadStart [0x00007FF86DEC26B1+33]
-</msg>
-<msg time="2024-03-28T21:42:47.578049" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7CEAE70C2+63090]
-	(No symbol) [0x00007FF7CEA52D12]
-	(No symbol) [0x00007FF7CE8EEC65]
-	(No symbol) [0x00007FF7CE8CCA7C]
-	(No symbol) [0x00007FF7CE95D687]
-	(No symbol) [0x00007FF7CE972AC1]
-	(No symbol) [0x00007FF7CE956D83]
-	(No symbol) [0x00007FF7CE9283A8]
-	(No symbol) [0x00007FF7CE929441]
-	GetHandleVerifier [0x00007FF7CEEE262D+4238301]
-	GetHandleVerifier [0x00007FF7CEF1F78D+4488509]
-	GetHandleVerifier [0x00007FF7CEF17A6F+4456479]
-	GetHandleVerifier [0x00007FF7CEBC0606+953270]
-	(No symbol) [0x00007FF7CEA5E5DF]
-	(No symbol) [0x00007FF7CEA592B4]
-	(No symbol) [0x00007FF7CEA593EB]
-	(No symbol) [0x00007FF7CEA49C24]
-	BaseThreadInitThunk [0x00007FF86D3E7344+20]
-	RtlUserThreadStart [0x00007FF86DEC26B1+33]
-</msg>
+<msg time="2024-03-28T21:58:03.400566" level="INFO">Simulating Mouse Over on element '//span[.='Excel Export']'.</msg>
 <arg>${EXCEL_EXPORT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="FAIL" start="2024-03-28T21:42:47.556994" elapsed="0.025566">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7CEAE70C2+63090]
-	(No symbol) [0x00007FF7CEA52D12]
-	(No symbol) [0x00007FF7CE8EEC65]
-	(No symbol) [0x00007FF7CE8CCA7C]
-	(No symbol) [0x00007FF7CE95D687]
-	(No symbol) [0x00007FF7CE972AC1]
-	(No symbol) [0x00007FF7CE956D83]
-	(No symbol) [0x00007FF7CE9283A8]
-	(No symbol) [0x00007FF7CE929441]
-	GetHandleVerifier [0x00007FF7CEEE262D+4238301]
-	GetHandleVerifier [0x00007FF7CEF1F78D+4488509]
-	GetHandleVerifier [0x00007FF7CEF17A6F+4456479]
-	GetHandleVerifier [0x00007FF7CEBC0606+953270]
-	(No symbol) [0x00007FF7CEA5E5DF]
-	(No symbol) [0x00007FF7CEA592B4]
-	(No symbol) [0x00007FF7CEA593EB]
-	(No symbol) [0x00007FF7CEA49C24]
-	BaseThreadInitThunk [0x00007FF86D3E7344+20]
-	RtlUserThreadStart [0x00007FF86DEC26B1+33]
-</status>
+<status status="PASS" start="2024-03-28T21:58:03.400566" elapsed="0.284637"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-28T21:58:05.687065" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.583560" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:58:03.686200" elapsed="2.000865"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:05.688472" level="INFO">Sending key(s) ('\\',) to //span[.='Excel Export'] element.</msg>
+<msg time="2024-03-28T21:58:05.980798" level="INFO">Sending key \</msg>
 <arg>${EXCEL_EXPORT}</arg>
 <arg>\\</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.583560" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:58:05.687065" elapsed="0.303738"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-28T21:58:06.993728" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.584559" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:58:05.991803" elapsed="1.001925"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:06.995731" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg time="2024-03-28T21:58:06.996729" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg time="2024-03-28T21:58:06.996729" level="INFO">Releasing special key ENTER.</msg>
 <arg>None</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.585560" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:58:06.995731" elapsed="0.008999"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:07.005731" level="INFO">Clicking element '//a[contains(.,'Telephelyek')]'.</msg>
 <arg>${TELEPHELYEK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.586560" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-28T21:58:07.005731" elapsed="0.061654"/>
 </kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:07.069386" level="INFO">Typing text 'Beata Howe' into text field '//input[@id='Grid_ToolbarSearchBox']'.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${DROPDOWN_FULLNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:58:07.069386" elapsed="0.115259"/>
+</kw>
 <arg>5x</arg>
 <arg>1s</arg>
 <arg>Input Text</arg>
 <arg>${SEARCH_FIELD}</arg>
-<arg>${first_name} ${last_name}</arg>
+<arg>${DROPDOWN_FULLNAME}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.586560" elapsed="0.001001"/>
+<status status="PASS" start="2024-03-28T21:58:07.068386" elapsed="0.116259"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:07.185645" level="INFO">Clicking element '//span[@class='e-searchclear e-search-icon e-icons e-input-group-icon']'.</msg>
 <arg>${SEARCH_ENTER}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.587561" elapsed="0.001000"/>
+<status status="PASS" start="2024-03-28T21:58:07.185645" elapsed="0.092622"/>
 </kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:07.280267" level="INFO">Clicking element '//a[contains(.,'Szervíz')]'.</msg>
+<msg time="2024-03-28T21:58:07.471801" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-262.png"&gt;&lt;img src="selenium-screenshot-262.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-28T21:58:07.471801" level="FAIL">Element with locator '//a[contains(.,'Szervíz')]' not found.</msg>
 <arg>${STREET_URL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:42:47.588561" elapsed="0.000000"/>
+<status status="FAIL" start="2024-03-28T21:58:07.279266" elapsed="0.196538">Element with locator '//a[contains(.,'Szervíz')]' not found.</status>
 </kw>
-<kw name="Test Teardown" owner="resources.resource" type="TEARDOWN">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:58:08.477154" level="INFO">Clicking element '//a[contains(.,'Szervíz')]'.</msg>
+<arg>${STREET_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:58:08.476142" elapsed="0.295281"/>
+</kw>
+<arg>5x</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${STREET_URL}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-28T21:58:07.279266" elapsed="1.492157"/>
+</kw>
+<status status="PASS" start="2024-03-28T21:57:59.147295" elapsed="9.625129"/>
+</test>
+<kw name="Suite Teardown" owner="resources.resource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-28T21:42:47.590562" elapsed="2.088364"/>
+<status status="PASS" start="2024-03-28T21:58:08.775424" elapsed="2.193739"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:42:47.589562" elapsed="2.089364"/>
+<status status="PASS" start="2024-03-28T21:58:08.774425" elapsed="2.194738"/>
 </kw>
-<status status="FAIL" start="2024-03-28T21:42:33.881581" elapsed="15.798353">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7CEAE70C2+63090]
-	(No symbol) [0x00007FF7CEA52D12]
-	(No symbol) [0x00007FF7CE8EEC65]
-	(No symbol) [0x00007FF7CE8CCA7C]
-	(No symbol) [0x00007FF7CE95D687]
-	(No symbol) [0x00007FF7CE972AC1]
-	(No symbol) [0x00007FF7CE956D83]
-	(No symbol) [0x00007FF7CE9283A8]
-	(No symbol) [0x00007FF7CE929441]
-	GetHandleVerifier [0x00007FF7CEEE262D+4238301]
-	GetHandleVerifier [0x00007FF7CEF1F78D+4488509]
-	GetHandleVerifier [0x00007FF7CEF17A6F+4456479]
-	GetHandleVerifier [0x00007FF7CEBC0606+953270]
-	(No symbol) [0x00007FF7CEA5E5DF]
-	(No symbol) [0x00007FF7CEA592B4]
-	(No symbol) [0x00007FF7CEA593EB]
-	(No symbol) [0x00007FF7CEA49C24]
-	BaseThreadInitThunk [0x00007FF86D3E7344+20]
-	RtlUserThreadStart [0x00007FF86DEC26B1+33]
-</status>
-</test>
-<status status="FAIL" start="2024-03-28T21:41:17.775057" elapsed="91.908873"/>
+<status status="PASS" start="2024-03-28T21:57:15.400008" elapsed="55.569155"/>
 </suite>
-<status status="FAIL" start="2024-03-28T21:41:17.743897" elapsed="91.942033"/>
+<status status="PASS" start="2024-03-28T21:57:15.369655" elapsed="55.602509"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="2" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="2" skip="0" id="s1" name="Feladat">Feladat</stat>
-<stat pass="2" fail="2" skip="0" id="s1-s1" name="Test">Feladat.Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Feladat">Feladat</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Test">Feladat.Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-03-28T21:42:47.573047" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.60)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7CEAE70C2+63090]
-	(No symbol) [0x00007FF7CEA52D12]
-	(No symbol) [0x00007FF7CE8EEC65]
-	(No symbol) [0x00007FF7CE8CCA7C]
-	(No symbol) [0x00007FF7CE95D687]
-	(No symbol) [0x00007FF7CE972AC1]
-	(No symbol) [0x00007FF7CE956D83]
-	(No symbol) [0x00007FF7CE9283A8]
-	(No symbol) [0x00007FF7CE929441]
-	GetHandleVerifier [0x00007FF7CEEE262D+4238301]
-	GetHandleVerifier [0x00007FF7CEF1F78D+4488509]
-	GetHandleVerifier [0x00007FF7CEF17A6F+4456479]
-	GetHandleVerifier [0x00007FF7CEBC0606+953270]
-	(No symbol) [0x00007FF7CEA5E5DF]
-	(No symbol) [0x00007FF7CEA592B4]
-	(No symbol) [0x00007FF7CEA593EB]
-	(No symbol) [0x00007FF7CEA49C24]
-	BaseThreadInitThunk [0x00007FF86D3E7344+20]
-	RtlUserThreadStart [0x00007FF86DEC26B1+33]
-</msg>
 </errors>
 </robot>
