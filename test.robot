@@ -8,6 +8,7 @@ Test Teardown    Test Teardown
 *** Test Cases ***
 
 Searching
+#Partnerek
     Click Element    ${PARTNEREK}
     Sleep    4s
     Mouse Over    ${ADDBUTTON}
@@ -51,15 +52,11 @@ Eszkozok
 
 #Beírás Eszközök mezőkbe
     Input Text    ${MODEL_FIELD}    ${manufacturer} ${model}
-    Sleep    2s
-    Mouse Over    ${CUSTOMER_FIELD}
-    Sleep    2s
-    Press Keys    ${CUSTOMER_FIELD}    \\
     Sleep    1s
-    Input Text    ${CUSTOMER_FIELD}    ${first_name} ${last_name}
-    Sleep    1s
-    Mouse Over    //form[@class='e-gridform e-lib e-formvalidator e-editing']/table[@class='e-table']
-    Press Keys    //form[@class='e-gridform e-lib e-formvalidator e-editing']/table[@class='e-table']    \\
+    Click Element    ${CUSTOMER_ARROW}
+    Sleep    2s
+    Wait Until Element Is Visible    //li[.='${DROPDOWN_FULLNAME}']    timeout=10s
+    Click Element    //li[.='${DROPDOWN_FULLNAME}']
     Input Text    ${PLATFORM_FIELD}    ${platform}
     Input Text    ${SERIALNUMB_FIELD}    ${serial_number}
     Click Button    ${SAVEBUTTON_ESZKOZ}
@@ -67,7 +64,11 @@ Eszkozok
 Last Steps
 #Mentés
     Click Element    ${PARTNEREK}
-    Wait Until Keyword Succeeds    5s    1s    Click Element    ${EXCEL_EXPORT}
+    Sleep    4s
+    Mouse Over    ${EXCEL_EXPORT}
+    Sleep    2s
+    Press Keys    ${EXCEL_EXPORT}    \\
+    Sleep    1s
     Press Keys    None    ENTER
 
 #Telephelyekre vissza

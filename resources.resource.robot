@@ -20,6 +20,8 @@ ${street_name}    ${EMPTY}
 ${zip_code}    ${EMPTY}
 ${street_address}    ${EMPTY}
 
+${DROPDOWN_FULLNAME}    ${EMPTY}
+
 #Test Def
 ${HOMEPAGE_URL}    https://bwpool.azurewebsites.net/
 ${BROWSER}    Chrome
@@ -49,10 +51,12 @@ ${ESZKOZOK}    //a[contains(.,'Eszközök')]
 ${ADDBUTTONTREE}    //span[.='Add']
 ${MODEL_FIELD}    //input[@id='name']
 ${CUSTOMER_FIELD}    //*[@id="Grid_dialogEdit_wrapper_dialog-content"]/div/form/table/tbody/tr[3]/td/span
-${CUSTOMER_ARROW}    //span[@class='e-ddl e-lib e-input-group e-control-container e-control-wrapper e-valid-input e-input-focus valid']/span[@class='e-input-group-icon e-ddl-icon e-icons e-ddl-disable-icon']
+${CUSTOMER_ARROW}    //*[@id="Grid_dialogEdit_wrapper_dialog-content"]/div/form/table/tbody/tr[3]/td/span/span[2]
 ${PLATFORM_FIELD}    //textarea[@id='Desc']
 ${SERIALNUMB_FIELD}    //textarea[@id='Comm']
 ${SAVEBUTTON_ESZKOZ}    //button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']
+
+
 
 #Mentés
 ${EXCEL_EXPORT}    //span[.='Excel Export']
@@ -92,6 +96,8 @@ Test Setup
     Set Global Variable    ${model}    ${body_device}[0][model]
     Set Global Variable    ${platform}    ${body_device}[0][platform]
     Set Global Variable    ${serial_number}    ${body_device}[0][serial_number]
+    Set Global Variable    ${DROPDOWN_FULLNAME}    ${first_name} ${last_name}
+
     Sleep    ${DELAY_TIME}s
 
 Test Teardown
