@@ -48,8 +48,9 @@ ${SAVEBUTTON_TELEP}    //button[@class='e-control e-btn e-lib e-control e-btn e-
 ${ESZKOZOK}    //a[contains(.,'Eszközök')]
 ${ADDBUTTONTREE}    //span[.='Add']
 ${MODEL_FIELD}    //input[@id='name']
-${CUSTOMER_FIELD}    //span[@class='e-ddl e-lib e-input-group e-control-container e-control-wrapper e-input-focus valid']/input[@class='e-control e-combobox e-lib e-input']
+${CUSTOMER_FIELD}    //*[@id="Grid_dialogEdit_wrapper_dialog-content"]/div/form/table/tbody/tr[3]/td/span
 ${CUSTOMER_ARROW}    //span[@class='e-ddl e-lib e-input-group e-control-container e-control-wrapper e-valid-input e-input-focus valid']/span[@class='e-input-group-icon e-ddl-icon e-icons e-ddl-disable-icon']
+${PLATFORM_FIELD}    //textarea[@id='Desc']
 ${SERIALNUMB_FIELD}    //textarea[@id='Comm']
 ${SAVEBUTTON_ESZKOZ}    //button[@class='e-control e-btn e-lib e-control e-btn e-lib e-primary e-flat']
 

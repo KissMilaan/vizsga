@@ -45,18 +45,22 @@ Eszkozok
     Click Element    ${ESZKOZOK}
     Sleep    4s
     Mouse Over    ${ADDBUTTONTREE}
-    Sleep    2s
+    Sleep    4s
     Press Keys    ${ADDBUTTONTREE}    \\
-    Sleep    1s
+    Sleep    4s
 
 #Beírás Eszközök mezőkbe
     Input Text    ${MODEL_FIELD}    ${manufacturer} ${model}
-    Mouse Over    ${CUSTOMER_ARROW}
     Sleep    2s
-    Press Keys    ${CUSTOMER_ARROW}    \\
+    Mouse Over    ${CUSTOMER_FIELD}
+    Sleep    2s
+    Press Keys    ${CUSTOMER_FIELD}    \\
     Sleep    1s
-    Select From List By Value    ${CUSTOMER_ARROW}    ${first_name} ${last_name}
+    Input Text    ${CUSTOMER_FIELD}    ${first_name} ${last_name}
     Sleep    1s
+    Mouse Over    //form[@class='e-gridform e-lib e-formvalidator e-editing']/table[@class='e-table']
+    Press Keys    //form[@class='e-gridform e-lib e-formvalidator e-editing']/table[@class='e-table']    \\
+    Input Text    ${PLATFORM_FIELD}    ${platform}
     Input Text    ${SERIALNUMB_FIELD}    ${serial_number}
     Click Button    ${SAVEBUTTON_ESZKOZ}
 
